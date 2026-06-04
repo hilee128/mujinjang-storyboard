@@ -225,6 +225,24 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
 
 .sc-foot { padding: 11px 18px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 7px; }
 
+/* ── REFERENCE IMAGE ── */
+.ref-section { margin-top: 8px; }
+.ref-label { font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 5px; }
+.ref-thumb { width: 100%; border-radius: 7px; border: 1px solid var(--border); display: block; object-fit: cover; aspect-ratio: 16/9; transition: border-color .15s; }
+.ref-thumb:hover { border-color: var(--orange); }
+
+/* ── CRAWL KEYWORDS ── */
+.kw-section { margin-top: 8px; }
+.kw-label { font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 5px; }
+.kw-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.kw-tag {
+  background: var(--card2); border: 1px solid var(--border);
+  border-radius: 5px; padding: 3px 8px; font-size: 11px; color: var(--text2);
+  cursor: pointer; transition: all .15s; user-select: none;
+}
+.kw-tag:hover { border-color: var(--orange); color: var(--orange); }
+.kw-tag.copied { background: var(--orange); border-color: var(--orange); color: #fff; }
+
 .add-wrap { margin-top: 16px; }
 .add-btn { background: transparent; border: 2px dashed var(--border); border-radius: 12px; color: var(--text3); font-size: 13px; padding: 15px; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: inherit; transition: all .15s; }
 .add-btn:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-dim); }
@@ -404,46 +422,169 @@ const CL_DATA = [
 const MOODS = ['강렬한','힙한','감성적','에너지틱','클린','미래적','스트릿','드라마틱'];
 
 const DEFAULT_SCENES = [
-  { id:'sc1', title:'씬 1 — 오프닝', ts:'00:00', te:'00:04',
-    char:'다크 컬러 오버핏 세트를 입은 AI 패션 캐릭터 (성별 중립, 미래적 외모)',
-    costume:'블랙 오버핏 후디 + 와이드 팬츠 + 청키 스니커즈', action:'카메라를 향해 천천히 돌아서며 시선을 맞춤',
-    expr:'쿨하고 자신감 있는 표정', setting:'완전한 검정 배경, 발 아래 #FE4900 오렌지 빛이 퍼져나옴',
-    camera:'Low angle → Eye level 슬로우 틸트업', text:'', sound:'저음 베이스 빌드업, 긴장감 있는 앰비언스',
-    prompt:'AI fashion character, gender-neutral futuristic humanoid, oversized black hoodie and wide-leg pants, chunky sneakers, pure black background, orange light #FE4900 glowing upward from ground beneath feet, slow camera tilt up from feet to face, cinematic lighting, photorealistic, 9:16 vertical',
-    moods:['강렬한','미래적'], img:'' },
-  { id:'sc2', title:'씬 2 — 패션 체인지 (룩 1)', ts:'00:04', te:'00:09',
-    char:'씬 1과 동일 AI 캐릭터, 새로운 룩으로 전환',
-    costume:'#FE4900 레터링 그래픽 티셔츠 + 데님 카고 팬츠 + 화이트 하이탑',
-    action:'오렌지 파티클이 캐릭터를 감싸며 의상이 순식간에 교체되는 outfit swap 효과',
-    expr:'약간 놀라며 웃는 표정, 생동감', setting:'도시 스트릿 배경, 네온 오렌지 조명, 야간',
-    camera:'미디엄 샷 → 캐릭터 중심 빠른 360도 회전', text:'무진장 할인', sound:'비트 드롭, 힙합 베이스',
-    prompt:'AI fashion character wearing orange #FE4900 graphic tee, cargo denim pants, white high-top sneakers, glowing orange energy particle outfit transformation effect, neon-lit urban street night background, fast 360 camera spin, dynamic, cinematic, 9:16 vertical',
-    moods:['힙한','에너지틱'], img:'' },
-  { id:'sc3', title:'씬 3 — 패션 체인지 (룩 2)', ts:'00:09', te:'00:14',
-    char:'씬 1·2와 동일 AI 캐릭터, 세 번째 룩', costume:'베이지 오버사이즈 코트 + 슬랙스 + 로퍼 (시크 무드)',
-    action:'카메라 쪽으로 자신감 있게 걸어오다가 멈추며 포즈', expr:'시크하고 여유로운 표정',
-    setting:'크림/아이보리 스튜디오 배경, #FE4900 오렌지 그라디언트 사이드 라이팅',
-    camera:'아이레벨 워킹샷 → 얼굴 클로즈업', text:'역대급 5주년', sound:'리듬 변화, 부드러운 비트 전환',
-    prompt:'AI fashion character in sleek beige oversized coat, slacks, loafers, walking confidently toward camera, cream white studio background with orange #FE4900 gradient side lighting, tracking shot then close-up face, chic Korean fashion aesthetic, cinematic, 9:16 vertical',
-    moods:['감성적','클린'], img:'' },
-  { id:'sc4', title:'씬 4 — 무진장 폭발', ts:'00:14', te:'00:17',
-    char:'세 룩의 캐릭터 분신이 동시에 등장', costume:'씬 1·2·3 의상 각각 착용',
-    action:'세 캐릭터가 화면 중앙에서 바깥으로 퍼지며 포즈, 패션 아이템이 폭발적으로 쏟아짐',
-    expr:'세 캐릭터 모두 강렬하고 자신감 있는 포즈', setting:'검정 배경 + #FE4900 에너지 폭발, 스니커즈·가방·의류 난무',
-    camera:'와이드 샷 → 드라마틱 줌아웃', text:'무진장 터진다', sound:'클라이맥스 비트, 최고조',
-    prompt:'Three identical AI fashion characters in different outfits simultaneously exploding outward from screen center, fashion items sneakers bags clothes flying in all directions, massive orange #FE4900 energy burst black background, dramatic wide shot zoom out, cinematic climax, 9:16 vertical',
-    moods:['강렬한','드라마틱','에너지틱'], img:'' },
-  { id:'sc5', title:'씬 5 — 키비주얼 + 클로징', ts:'00:17', te:'00:20',
-    char:'AI 캐릭터 오렌지 실루엣 (배경으로 물러남)', costume:'오렌지 실루엣',
-    action:'캐릭터 실루엣이 뒤로 물러나며 무진장 키비주얼 이미지가 전면 등장', expr:'(실루엣)',
-    setting:'무신사 무진장 키비주얼 전체 화면 — 편집 시 합성', camera:'스태틱 샷, 텍스트·로고 페이드인',
-    text:'26 여름 무진장 / musinsa.com', sound:'아웃트로, 시그니처 사운드 페이드아웃',
-    prompt:'Orange silhouette of AI fashion character stepping backward, Musinsa Mujinjang key visual image appearing center foreground, black background, orange glow aura, clean minimalist composition, text overlay fade in, cinematic outro, 9:16 vertical',
-    moods:['클린','드라마틱'], img:'' },
+  {
+    id:'sc1', title:'씬 1 — 오프닝 (어둠 속 침입)',
+    ts:'00:00', te:'00:02',
+    char:'어둠의 그림자 — 얼굴·몸 전혀 비공개. 벽에 실루엣만 보임',
+    costume:'검정 실루엣 (전신 미공개)',
+    action:'커튼이 바람에 흔들리며 그림자 실루엣이 창문을 통해 스며들듯 등장',
+    expr:'(보이지 않음 — 실루엣만)',
+    setting:'완전한 어둠. 열린 창문 틈으로 빛이 새어들어옴. 커튼 흔들림',
+    camera:'익스트림 클로즈업 창문 틀 → 벽에 실루엣 클로즈업',
+    text:'',
+    sound:'완전한 정적. 바람 소리, 커튼 스치는 소리만',
+    prompt:'Dark bedroom at night, curtain blowing from open window, mysterious dark shadow silhouette on wall, cinematic thriller noir lighting, no face visible, photorealistic, 16:9 horizontal',
+    moods:['강렬한','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1509515837298-2c67a3933321?w=600&q=80',
+    crawlKw:['어두운 방 창문 밤','실루엣 그림자 벽','스릴러 어두운 실내 영화'],
+    img:'',
+  },
+  {
+    id:'sc2', title:'씬 2-A — 옷장 습격 (스트릿)',
+    ts:'00:02', te:'00:04',
+    char:'살색 손만 노출 — 심플한 실버 반지 착용',
+    costume:'손만 노출 (살색, 반지 하나)',
+    action:'살색 손이 어두운 옷장에서 오버핏 후디를 옷걸이에서 빠르게 낚아챔',
+    expr:'(손만 보임)',
+    setting:'어두운 방. 옷장 내부. 스트릿 스타일 의류 가득 (후디, 스니커즈, 카고)',
+    camera:'옷장 내부 클로즈업 → 손 익스트림 클로즈업',
+    text:'',
+    sound:'옷걸이 쓸리는 소리. 긴장감 베이스 시작',
+    prompt:'Extreme close-up of human hand (skin tone, minimal silver ring) reaching into dark wardrobe, grabbing oversized streetwear hoodie off hanger, dark room atmosphere, shallow depth of field, cinematic thriller, 16:9 horizontal',
+    moods:['강렬한','스트릿'],
+    refImg:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    crawlKw:['손 옷장 클로즈업','옷걸이 옷 가져가는 손','어두운 옷장 스트릿 패션'],
+    img:'',
+  },
+  {
+    id:'sc3', title:'씬 2-B — 옷장 습격 (Y2K)',
+    ts:'00:04', te:'00:06',
+    char:'살색 손만 노출',
+    costume:'손만 노출',
+    action:'살색 손이 행거를 통째로 쓸어담듯 Y2K 크롭티·미니스커트 가져감',
+    expr:'(손만 보임)',
+    setting:'어두운 방. 파스텔 핑크·화이트 Y2K 의류 가득한 옷장',
+    camera:'미디엄 클로즈업 → 행거 통째 빠지는 장면',
+    text:'',
+    sound:'옷걸이 우수수 쏟아지는 소리. 베이스 빌드업',
+    prompt:'Extreme close-up of human hand (skin tone) sweeping Y2K pastel fashion clothes off a rack in dark wardrobe, crop tops mini skirts, cinematic dark atmosphere, 16:9 horizontal',
+    moods:['강렬한','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80',
+    crawlKw:['Y2K 옷장 파스텔 의류','행거 옷 쓸어가는 장면','어두운 방 여성 패션 옷장'],
+    img:'',
+  },
+  {
+    id:'sc4', title:'씬 2-C — 옷장 습격 (에겐룩)',
+    ts:'00:06', te:'00:09',
+    char:'살색 손만 노출',
+    costume:'손만 노출',
+    action:'살색 손이 린넨 코트를 조심스럽고 신중하게 가져감 (마치 가장 귀한 것처럼)',
+    expr:'(손만 보임)',
+    setting:'어두운 방. 깔끔하게 정돈된 에겐룩 옷장 (린넨·베이지·화이트)',
+    camera:'슬로우 모션 클로즈업 — 손이 코트 어깨를 잡는 순간',
+    text:'',
+    sound:'슬로우 모션 사운드. 베이스 점점 고조',
+    prompt:'Extreme close-up of human hand (skin tone) carefully lifting a linen coat from a neat organized dark wardrobe, slow motion, minimalist fashion aesthetic, cinematic noir lighting, 16:9 horizontal',
+    moods:['감성적','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600&q=80',
+    crawlKw:['에겐룩 옷장 린넨 코트','정돈된 미니멀 옷장 어두운 조명','손 코트 가져가는 클로즈업'],
+    img:'',
+  },
+  {
+    id:'sc5', title:'씬 3 — 피해자 몽타주',
+    ts:'00:09', te:'00:13',
+    char:'스타일 다른 3명 — 스트릿남 / Y2K녀 / 에겐룩녀',
+    costume:'각자 잠옷 or 집에서 입는 편한 옷 (피해 직후)',
+    action:'각자 텅 빈 옷장 앞에서 황당한 표정. 빠른 컷 전환 (인당 1초)',
+    expr:'황당함 → 분노 → 멍함',
+    setting:'각자의 방. 텅 빈 옷장이 활짝 열려있음',
+    camera:'미디엄 샷. 인물 + 텅 빈 옷장 함께 보임',
+    text:'',
+    sound:'비트 드롭 시작. 리액션마다 타악기 강조',
+    prompt:'Young Korean person standing in front of completely empty open wardrobe with shocked expression, dark bedroom, cinematic lighting, 16:9 horizontal',
+    moods:['힙한','에너지틱'],
+    refImg:'https://images.unsplash.com/photo-1541178735493-479c1a27ed24?w=600&q=80',
+    crawlKw:['텅 빈 옷장 황당한 표정','빈 옷장 앞 사람','충격받은 표정 어두운 방'],
+    img:'',
+  },
+  {
+    id:'sc6', title:'씬 4 — 추격',
+    ts:'00:13', te:'00:16',
+    char:'스타일 다른 3명이 어두운 골목에서 합류. 트럭 실루엣 발견',
+    costume:'각자 다른 스트릿·Y2K·에겐룩',
+    action:'서로 다른 스타일의 사람들이 골목에서 마주침 → 트럭 짐칸 문이 닫히는 것 발견',
+    expr:'긴박함. 눈빛 교환',
+    setting:'어두운 도시 골목. 가로등 빛. 저 멀리 트럭 실루엣 (역광)',
+    camera:'와이드 샷 → 트럭 줌인',
+    text:'',
+    sound:'긴박한 BGM 클라이맥스 직전',
+    prompt:'Group of young Koreans in different fashion styles (streetwear, Y2K, minimal chic) standing in dark urban alley at night, truck silhouette in background with backlight, cinematic thriller atmosphere, 16:9 horizontal',
+    moods:['강렬한','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80',
+    crawlKw:['어두운 골목 도시 야경','트럭 역광 실루엣 밤','도시 밤 골목 젊은이들'],
+    img:'',
+  },
+  {
+    id:'sc7', title:'씬 5 — 비밀의 문',
+    ts:'00:16', te:'00:19',
+    char:'살색 손 (마지막 등장)',
+    costume:'손만 노출',
+    action:'살색 손이 커다란 문손잡이를 잡고 천천히 당김. 문 틈으로 #FE4900 오렌지빛이 새어나옴',
+    expr:'(손만 보임)',
+    setting:'완전한 어둠. 거대한 문 하나. 문 틈에서 오렌지빛 스며나옴',
+    camera:'문손잡이 클로즈업 → 빛 새는 틈 클로즈업',
+    text:'',
+    sound:'BGM 완전 멈춤 — 0.5초 정적 — 문 삐걱이는 소리',
+    prompt:'Close-up of human hand (skin tone) slowly pulling open a large dark door, bright orange #FE4900 light dramatically pouring through the crack, cinematic tension moment, dark background, 16:9 horizontal',
+    moods:['강렬한','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80',
+    crawlKw:['문 틈 빛 클로즈업','손 문 여는 장면 영화적','어두운 문 오렌지빛 반전'],
+    img:'',
+  },
+  {
+    id:'sc8', title:'씬 6 — 반전: 무진장 페스티벌',
+    ts:'00:19', te:'00:22',
+    char:'피해자 3명 + 수많은 사람들. 문이 열리며 공간 등장',
+    costume:'각자 스타일 의류 (이미 전시된 옷들)',
+    action:'문이 활짝 열리며 오렌지빛 무진장 페스티벌 공간 등장. 훔쳐간 모든 옷들이 전시됨. 피해자들 표정 황당 → 경이로움으로 변화',
+    expr:'입이 떡 벌어진 표정 → 눈이 반짝이는 경이로움',
+    setting:'거대한 오렌지 #FE4900 공간. 스트릿·Y2K·에겐룩 등 모든 스타일 의류가 전시된 무진장 페스티벌',
+    camera:'와이드 드라마틱 샷. 공간 전체 노출. 피해자들 실루엣 역광',
+    text:'아 — 여기 다 있었구나',
+    sound:'BGM 전환 — 밝고 에너지틱한 축제 비트 폭발',
+    prompt:'Grand reveal of massive vibrant orange #FE4900 festival fashion space, all kinds of clothing styles displayed on racks and mannequins (streetwear Y2K minimal chic), young Koreans in awe at entrance, dramatic wide cinematic shot, 16:9 horizontal',
+    moods:['에너지틱','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=80',
+    crawlKw:['오렌지 패션 공간 인테리어','패션 전시 오렌지 조명','패션 페스티벌 대형 공간'],
+    img:'',
+  },
+  {
+    id:'sc9', title:'씬 7 — 카피 + 키비주얼',
+    ts:'00:22', te:'00:25',
+    char:'(없음)',
+    costume:'(없음)',
+    action:'검정 배경에 카피 순차 페이드인 → 무신사 무진장 키비주얼',
+    expr:'(텍스트만)',
+    setting:'검정 배경. 흰 텍스트. 마지막 무신사 오렌지 키비주얼',
+    camera:'스태틱. 텍스트 페이드인',
+    text:'훔친 게 아니었다, 모은 거였다. → 범인은 무진장이었다. → 무진장엔 다 있으니까',
+    sound:'페이드아웃. 시그니처 사운드',
+    prompt:'Minimal black background, bold white Korean typography fading in sequentially, clean cinematic closing shot, orange accent color #FE4900, 16:9 horizontal',
+    moods:['클린','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=600&q=80',
+    crawlKw:['검정 배경 흰 텍스트 타이포','미니멀 카피 텍스트 광고','무신사 브랜드 키비주얼 오렌지'],
+    img:'',
+  },
 ];
 
 // ────────── STATE ──────────
 let checks = JSON.parse(localStorage.getItem('mj_checks') || '{}');
+const SCENE_VERSION = 'v3';
+const savedVersion = localStorage.getItem('mj_scene_ver');
+if (savedVersion !== SCENE_VERSION) {
+  localStorage.removeItem('mj_scenes');
+  localStorage.setItem('mj_scene_ver', SCENE_VERSION);
+}
 let scenes = JSON.parse(localStorage.getItem('mj_scenes') || 'null') || JSON.parse(JSON.stringify(DEFAULT_SCENES));
 let dragIdx = null;
 let apiPanelOpen = true;
@@ -619,6 +760,20 @@ function makeCard(sc, i) {
         <button class="gen-btn" id="gb-${i}" onclick="generateImage(${i})">
           <span class="hf-icon">✦</span> Higgsfield로 생성
         </button>
+        ${sc.refImg ? `
+        <div class="ref-section">
+          <div class="ref-label">레퍼런스</div>
+          <a href="${h(sc.refImg)}" target="_blank">
+            <img class="ref-thumb" src="${h(sc.refImg)}" alt="레퍼런스 이미지" loading="lazy">
+          </a>
+        </div>` : ''}
+        ${sc.crawlKw && sc.crawlKw.length ? `
+        <div class="kw-section">
+          <div class="kw-label">크롤링 키워드</div>
+          <div class="kw-tags">
+            ${sc.crawlKw.map((k,ki)=>`<span class="kw-tag" onclick="copyKw(${i},${ki},this)">${h(k)}</span>`).join('')}
+          </div>
+        </div>` : ''}
       </div>
 
       <div class="fields">
@@ -865,6 +1020,13 @@ function exportJSON() {
 
 function trigUp(i) { document.getElementById('fi-'+i).click(); }
 function delImg(i) { scenes[i].img = ''; save(); renderScenes(); toast('이미지 삭제됨', 'ok'); }
+function copyKw(sceneIdx, kwIdx, el) {
+  const kw = scenes[sceneIdx].crawlKw?.[kwIdx] || '';
+  navigator.clipboard.writeText(kw).then(() => {
+    el.classList.add('copied');
+    setTimeout(() => el.classList.remove('copied'), 1500);
+  }).catch(() => toast('복사 실패', 'err'));
+}
 function imgUp(i, inp) {
   const f=inp.files[0]; if(!f) return;
   const r=new FileReader(); r.onload=e=>{ scenes[i].img=e.target.result; save(); renderScenes(); }; r.readAsDataURL(f);
