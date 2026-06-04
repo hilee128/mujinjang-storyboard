@@ -702,20 +702,20 @@ const DEFAULT_SCENES = [
     img:'',
   },
   {
-    id:'sc7c', title:'씬 7-C — 오렌지빛 틈',
+    id:'sc7c', title:'씬 7-C — 살색 팔 잡아당기기 (클라이맥스)',
     ts:'00:18', te:'00:19',
-    char:'(없음)',
-    costume:'(없음)',
-    action:'문 틈으로 #FE4900 오렌지빛이 새어나오기 시작. 점점 강해짐',
-    expr:'(없음)',
-    setting:'문 틈 클로즈업. 오렌지빛 강렬하게 스며나옴',
-    camera:'문 틈 클로즈업 → 빛 점점 강해짐',
+    char:'피해자 손 + 그림자의 살색 팔',
+    costume:'피해자 손(잡는 쪽) / 그림자 살색 팔(잡히는 쪽)',
+    action:'도망치려는 그림자의 살색 팔을 피해자가 세게 잡아당김. 그 힘에 문이 활짝 열리며 #FE4900 오렌지빛 무진장 공간이 터져나옴. 잡힌 살색 팔 = 범인 정체 첫 노출',
+    expr:'(손·팔만 보임. 극도의 긴장감)',
+    setting:'문 틈 클로즈업. 살색 팔이 문 밖으로 빠져나가려는 순간 잡힘. 문이 열리며 오렌지빛 폭발',
+    camera:'익스트림 클로즈업. 잡히는 손목 → 문이 열리며 와이드로 전환',
     text:'',
-    sound:'BGM 완전 멈춤 — 0.5초 정적',
-    prompt:'Dark door with intense orange light #FE4900 pouring through the crack, light getting stronger, dramatic reveal moment, cinematic, 16:9 horizontal',
-    moods:['강렬한','드라마틱'],
-    refImg:'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80',
-    crawlKw:['문 틈 오렌지빛','어두운 문 빛 새어나옴','문 틈 빛 클로즈업 영화적'],
+    sound:'0.5초 정적 → 문 쾅 열리는 소리와 동시에 축제 BGM 폭발',
+    prompt:'Extreme close-up of one hand grabbing another person\'s wrist/arm from behind a door, skin tone arm trying to escape being pulled back forcefully, dark background, door swinging open revealing intense orange #FE4900 light flooding in, dramatic climax moment, cinematic thriller, 16:9 horizontal',
+    moods:['강렬한','드라마틱','에너지틱'],
+    refImg:'https://images.unsplash.com/photo-1509515837298-2c67a3933321?w=600&q=80',
+    crawlKw:['손목 잡아당기는 손 클로즈업','팔 잡는 장면 드라마틱','문 열리며 빛 터지는 순간 손목'],
     img:'',
   },
   /* ── 블록 8: 반전 무진장 ── */
@@ -929,7 +929,7 @@ const DEFAULT_SCENES = [
 
 // ────────── STATE ──────────
 let checks = JSON.parse(localStorage.getItem('mj_checks') || '{}');
-const SCENE_VERSION = 'v4';
+const SCENE_VERSION = 'v5';
 const savedVersion = localStorage.getItem('mj_scene_ver');
 if (savedVersion !== SCENE_VERSION) {
   localStorage.removeItem('mj_scenes');
