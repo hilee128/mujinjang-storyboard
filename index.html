@@ -723,11 +723,9 @@ async function generateImage(idx) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        input: {
-          prompt: prompt,
-          aspect_ratio: '9:16',
-          safety_tolerance: 2,
-        }
+        prompt: prompt,
+        aspect_ratio: '9:16',
+        safety_tolerance: 2,
       })
     });
 
