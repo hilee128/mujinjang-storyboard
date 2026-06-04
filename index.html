@@ -25,39 +25,22 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
 
 /* ── HEADER ── */
 .hdr {
-  background: var(--bg2);
-  border-bottom: 1px solid var(--border);
-  padding: 0 24px;
-  display: flex; align-items: center; justify-content: space-between;
+  background: var(--bg2); border-bottom: 1px solid var(--border);
+  padding: 0 24px; display: flex; align-items: center; justify-content: space-between;
   position: sticky; top: 0; z-index: 200; height: 56px;
 }
 .hdr-logo { display: flex; align-items: center; gap: 10px; }
-.hdr-badge {
-  background: var(--orange); color: #fff;
-  font-weight: 900; font-size: 12px; letter-spacing: -0.2px;
-  padding: 4px 9px; border-radius: 4px;
-}
+.hdr-badge { background: var(--orange); color: #fff; font-weight: 900; font-size: 12px; letter-spacing: -0.2px; padding: 4px 9px; border-radius: 4px; }
 .hdr-title { font-size: 14px; font-weight: 700; color: var(--text); }
 .hdr-right { display: flex; align-items: center; gap: 16px; }
-.countdown {
-  display: flex; align-items: center; gap: 8px;
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 8px; padding: 7px 14px; font-size: 13px;
-}
+.countdown { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 7px 14px; font-size: 13px; }
 .cd-label { color: var(--text3); font-size: 11px; }
 .cd-time { color: var(--orange); font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: 1px; }
 .cd-urgent { color: #ef4444 !important; }
 
 /* ── TABS ── */
-.tabs {
-  display: flex; background: var(--bg2);
-  border-bottom: 1px solid var(--border); padding: 0 24px;
-}
-.tab {
-  padding: 13px 18px; font-size: 13px; font-weight: 600;
-  color: var(--text3); cursor: pointer;
-  border-bottom: 2px solid transparent; transition: all .18s;
-}
+.tabs { display: flex; background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; }
+.tab { padding: 13px 18px; font-size: 13px; font-weight: 600; color: var(--text3); cursor: pointer; border-bottom: 2px solid transparent; transition: all .18s; }
 .tab.on { color: var(--orange); border-bottom-color: var(--orange); }
 .tab:hover:not(.on) { color: var(--text2); }
 
@@ -65,8 +48,6 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
 .main { max-width: 1160px; margin: 0 auto; padding: 32px 24px; }
 .tc { display: none; }
 .tc.on { display: block; }
-
-/* ── SECTION HEADING ── */
 .sh { font-size: 22px; font-weight: 900; }
 .ss { font-size: 13px; color: var(--text3); margin-top: 4px; margin-bottom: 24px; }
 
@@ -86,24 +67,12 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
 
 /* ── CHECKLIST ── */
 .cl-section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 14px; overflow: hidden; }
-.cl-cat {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 12px 18px; background: var(--card2); border-bottom: 1px solid var(--border);
-  font-size: 11px; font-weight: 700; color: var(--text2); text-transform: uppercase; letter-spacing: .5px;
-}
+.cl-cat { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; background: var(--card2); border-bottom: 1px solid var(--border); font-size: 11px; font-weight: 700; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; }
 .cat-badge { background: var(--border); border-radius: 20px; padding: 2px 8px; font-size: 10px; color: var(--text3); }
-.cl-item {
-  display: flex; align-items: flex-start; gap: 13px;
-  padding: 13px 18px; border-bottom: 1px solid var(--border);
-  cursor: pointer; transition: background .12s;
-}
+.cl-item { display: flex; align-items: flex-start; gap: 13px; padding: 13px 18px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background .12s; }
 .cl-item:last-child { border-bottom: none; }
 .cl-item:hover { background: rgba(255,255,255,.025); }
-.cbox {
-  width: 19px; height: 19px; border: 2px solid var(--border);
-  border-radius: 5px; flex-shrink: 0; margin-top: 1px;
-  display: flex; align-items: center; justify-content: center; transition: all .15s;
-}
+.cbox { width: 19px; height: 19px; border: 2px solid var(--border); border-radius: 5px; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all .15s; }
 .cl-item.done .cbox { background: var(--orange); border-color: var(--orange); }
 .ccheck { display: none; color: #fff; font-size: 11px; font-weight: 700; }
 .cl-item.done .ccheck { display: block; }
@@ -112,8 +81,7 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
 .cl-item.done .ctitle { color: var(--text3); text-decoration: line-through; }
 .cdesc { font-size: 11px; color: var(--text3); margin-top: 3px; }
 
-/* ── SB TOOLBAR ── */
-.sb-toolbar { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 22px; }
+/* ── BUTTONS ── */
 .btn-row { display: flex; gap: 8px; }
 .btn { padding: 9px 16px; border-radius: 8px; border: none; font-size: 13px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; transition: all .15s; font-family: inherit; }
 .btn-o { background: var(--orange); color: #fff; }
@@ -124,169 +92,163 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
 .btn-r:hover { background: rgba(239,68,68,.2); }
 .btn-sm { padding: 6px 11px; font-size: 12px; }
 
+/* ── SB TOOLBAR ── */
+.sb-toolbar { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 22px; }
+
 /* ── CONCEPT BAR ── */
-.concept-bar {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 10px; padding: 14px 18px; margin-bottom: 22px;
-  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-}
+.concept-bar { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .concept-lbl { font-size: 12px; color: var(--text2); font-weight: 600; white-space: nowrap; }
-.ctag {
-  background: var(--card2); border: 1px solid var(--border);
-  border-radius: 20px; padding: 5px 13px; font-size: 12px;
-  color: var(--text2); cursor: pointer; transition: all .15s; user-select: none;
-}
+.ctag { background: var(--card2); border: 1px solid var(--border); border-radius: 20px; padding: 5px 13px; font-size: 12px; color: var(--text2); cursor: pointer; transition: all .15s; user-select: none; }
 .ctag.on { background: var(--orange); border-color: var(--orange); color: #fff; font-weight: 600; }
+
+/* ── HIGGSFIELD API PANEL ── */
+.api-panel {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; margin-bottom: 22px; overflow: hidden;
+}
+.api-panel-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 13px 18px; background: var(--card2); cursor: pointer;
+}
+.api-panel-title {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700; color: var(--text);
+}
+.api-panel-title .hf-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--text3);
+  transition: background .2s;
+}
+.api-panel-title .hf-dot.connected { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.api-toggle { background: none; border: none; color: var(--text3); font-size: 13px; cursor: pointer; font-family: inherit; padding: 2px 6px; }
+.api-panel-body { padding: 16px 18px; border-top: 1px solid var(--border); }
+.api-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; align-items: end; margin-bottom: 10px; }
+.api-field { display: flex; flex-direction: column; gap: 5px; }
+.api-field label { font-size: 10px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: .5px; }
+.api-input {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 7px;
+  color: var(--text); font-size: 12px; padding: 8px 11px; outline: none;
+  font-family: 'SF Mono', 'Courier New', monospace; transition: border-color .15s; width: 100%;
+}
+.api-input:focus { border-color: var(--orange); }
+.api-input::placeholder { color: var(--text3); }
+.api-note { font-size: 11px; color: var(--text3); line-height: 1.5; }
+.api-note a { color: var(--orange); text-decoration: none; }
+.api-note a:hover { text-decoration: underline; }
+.api-status-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+.api-status-txt { font-size: 12px; color: var(--text3); }
+.api-status-txt.ok { color: var(--green); }
+.api-status-txt.err { color: #ef4444; }
 
 /* ── SCENE CARD ── */
 .scenes { display: flex; flex-direction: column; gap: 18px; }
-.scene-card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 16px; overflow: hidden; transition: border-color .2s;
-}
+.scene-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: border-color .2s; }
 .scene-card:hover { border-color: #3a3a3a; }
 .scene-card.dragging { opacity: .45; border-color: var(--orange); }
 .scene-card.drag-over { border-color: var(--orange); border-style: dashed; }
 
-/* card header */
-.sc-head {
-  display: flex; align-items: center; gap: 14px;
-  padding: 14px 18px; background: var(--card2);
-  border-bottom: 1px solid var(--border); cursor: grab;
-}
+.sc-head { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--card2); border-bottom: 1px solid var(--border); cursor: grab; }
 .sc-head:active { cursor: grabbing; }
 .dh { color: var(--text3); font-size: 17px; cursor: grab; flex-shrink: 0; }
-.sc-num {
-  width: 34px; height: 34px; background: var(--orange); color: #fff;
-  font-weight: 900; font-size: 15px; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
+.sc-num { width: 34px; height: 34px; background: var(--orange); color: #fff; font-weight: 900; font-size: 15px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .sc-title-wrap { flex: 1; min-width: 0; }
-.sc-title-in {
-  background: transparent; border: none; color: var(--text);
-  font-size: 14px; font-weight: 700; width: 100%; outline: none; font-family: inherit;
-}
+.sc-title-in { background: transparent; border: none; color: var(--text); font-size: 14px; font-weight: 700; width: 100%; outline: none; font-family: inherit; }
 .sc-title-in::placeholder { color: var(--text3); }
 .sc-times { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text3); flex-shrink: 0; }
-.t-in {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 4px; color: var(--text2); font-size: 11px;
-  padding: 3px 6px; width: 48px; text-align: center; outline: none; font-family: inherit;
-}
+.t-in { background: var(--card); border: 1px solid var(--border); border-radius: 4px; color: var(--text2); font-size: 11px; padding: 3px 6px; width: 48px; text-align: center; outline: none; font-family: inherit; }
 .t-in:focus { border-color: var(--orange); }
 
-/* card body */
-.sc-body { padding: 18px; display: grid; grid-template-columns: 160px 1fr; gap: 18px; }
+.sc-body { padding: 18px; display: grid; grid-template-columns: 172px 1fr; gap: 18px; }
 
-/* visual thumb */
+/* ── VISUAL COLUMN ── */
+.visual-col { display: flex; flex-direction: column; gap: 8px; }
 .visual {
   background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
   aspect-ratio: 9/16; display: flex; flex-direction: column; align-items: center; justify-content: center;
   cursor: pointer; transition: border-color .15s; position: relative; overflow: hidden;
 }
 .visual:hover { border-color: var(--orange); }
-.visual img { width: 100%; height: 100%; object-fit: cover; }
+.visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 9px; }
 .v-ph { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 12px; }
 .v-icon { font-size: 26px; }
 .v-lbl { font-size: 10px; color: var(--text3); text-align: center; line-height: 1.4; }
-.v-add {
-  position: absolute; bottom: 7px; right: 7px;
-  background: rgba(0,0,0,.75); border: none; border-radius: 4px;
-  color: var(--text2); font-size: 10px; padding: 3px 6px;
-  cursor: pointer; font-family: inherit;
-}
+.v-add { position: absolute; bottom: 7px; right: 7px; background: rgba(0,0,0,.75); border: none; border-radius: 4px; color: var(--text2); font-size: 10px; padding: 3px 6px; cursor: pointer; font-family: inherit; }
 
-/* fields */
+/* ── LOADING OVERLAY ── */
+.v-loading {
+  display: none; position: absolute; inset: 0;
+  background: rgba(8,8,8,.88); border-radius: 9px;
+  flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  z-index: 10;
+}
+.v-loading.show { display: flex; }
+.spinner {
+  width: 28px; height: 28px; border: 3px solid var(--border);
+  border-top-color: var(--orange); border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.v-loading-txt { font-size: 11px; color: var(--text2); text-align: center; line-height: 1.4; padding: 0 8px; }
+
+/* ── GENERATE BUTTON ── */
+.gen-btn {
+  width: 100%; padding: 9px 8px; border-radius: 8px; border: none;
+  background: var(--orange); color: #fff; font-size: 12px; font-weight: 700;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  gap: 5px; font-family: inherit; transition: all .15s; white-space: nowrap;
+}
+.gen-btn:hover { background: var(--orange-dark); }
+.gen-btn:disabled { background: var(--card2); color: var(--text3); cursor: not-allowed; border: 1px solid var(--border); }
+.gen-btn .hf-icon { font-size: 13px; }
+
+/* ── FIELDS ── */
 .fields { display: flex; flex-direction: column; gap: 12px; }
 .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .field { display: flex; flex-direction: column; gap: 5px; }
 .field.full { grid-column: 1/-1; }
 .flbl { font-size: 10px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: .5px; }
-.fin {
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: 7px; color: var(--text); font-size: 12px;
-  padding: 8px 11px; outline: none; font-family: inherit; transition: border-color .15s;
-}
+.fin { background: var(--bg); border: 1px solid var(--border); border-radius: 7px; color: var(--text); font-size: 12px; padding: 8px 11px; outline: none; font-family: inherit; transition: border-color .15s; }
 .fin:focus { border-color: var(--orange); }
 .fin::placeholder { color: var(--text3); }
 
-/* prompt */
 .prompt-wrap { position: relative; }
-.prompt-ta {
-  background: var(--orange-dim); border: 1px solid rgba(254,73,0,.25);
-  border-radius: 8px; color: var(--text); font-size: 11px; line-height: 1.55;
-  padding: 9px 11px; outline: none; font-family: 'SF Mono', 'Courier New', monospace;
-  resize: vertical; width: 100%; transition: border-color .15s;
-}
+.prompt-ta { background: var(--orange-dim); border: 1px solid rgba(254,73,0,.25); border-radius: 8px; color: var(--text); font-size: 11px; line-height: 1.55; padding: 9px 11px; outline: none; font-family: 'SF Mono', 'Courier New', monospace; resize: vertical; width: 100%; transition: border-color .15s; }
 .prompt-ta:focus { border-color: var(--orange); }
 .prompt-ta::placeholder { color: var(--text3); font-family: inherit; }
-.copy-btn {
-  position: absolute; top: 7px; right: 7px;
-  background: var(--orange); color: #fff; border: none;
-  border-radius: 4px; font-size: 11px; padding: 3px 8px;
-  cursor: pointer; font-weight: 700; font-family: inherit;
-}
+.copy-btn { position: absolute; top: 7px; right: 7px; background: var(--orange); color: #fff; border: none; border-radius: 4px; font-size: 11px; padding: 3px 8px; cursor: pointer; font-weight: 700; font-family: inherit; }
 .copy-btn:hover { background: var(--orange-dark); }
 
-/* mood tags */
 .moodrow { display: flex; flex-wrap: wrap; gap: 6px; }
-.mtag {
-  background: var(--card2); border: 1px solid var(--border);
-  border-radius: 20px; padding: 4px 11px; font-size: 11px;
-  color: var(--text2); cursor: pointer; transition: all .15s; user-select: none;
-}
+.mtag { background: var(--card2); border: 1px solid var(--border); border-radius: 20px; padding: 4px 11px; font-size: 11px; color: var(--text2); cursor: pointer; transition: all .15s; user-select: none; }
 .mtag.on { background: var(--orange); border-color: var(--orange); color: #fff; }
 
-/* card footer */
-.sc-foot {
-  padding: 11px 18px; border-top: 1px solid var(--border);
-  display: flex; justify-content: flex-end; gap: 7px;
-}
+.sc-foot { padding: 11px 18px; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: 7px; }
 
-/* add scene */
 .add-wrap { margin-top: 16px; }
-.add-btn {
-  background: transparent; border: 2px dashed var(--border); border-radius: 12px;
-  color: var(--text3); font-size: 13px; padding: 15px; cursor: pointer;
-  width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: inherit; transition: all .15s;
-}
+.add-btn { background: transparent; border: 2px dashed var(--border); border-radius: 12px; color: var(--text3); font-size: 13px; padding: 15px; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; font-family: inherit; transition: all .15s; }
 .add-btn:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-dim); }
 
-/* total time indicator */
-.total-time {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 6px; padding: 6px 12px; font-size: 12px; color: var(--text2);
-}
-.total-time span { color: var(--orange); font-weight: 700; }
-
-/* toast */
-.toast {
-  position: fixed; bottom: 24px; right: 24px;
-  background: var(--card2); border: 1px solid var(--border);
-  border-radius: 10px; padding: 13px 18px; font-size: 13px; color: var(--text);
-  z-index: 9999; transform: translateY(80px); opacity: 0;
-  transition: all .3s; display: flex; align-items: center; gap: 9px; pointer-events: none;
-}
+/* ── TOAST ── */
+.toast { position: fixed; bottom: 24px; right: 24px; background: var(--card2); border: 1px solid var(--border); border-radius: 10px; padding: 13px 18px; font-size: 13px; color: var(--text); z-index: 9999; transform: translateY(80px); opacity: 0; transition: all .3s; display: flex; align-items: center; gap: 9px; pointer-events: none; max-width: 360px; }
 .toast.show { transform: translateY(0); opacity: 1; }
 .toast.ok { border-color: var(--green); }
 .toast.err { border-color: #ef4444; }
 
-/* print */
+/* ── PRINT ── */
 @media print {
-  .hdr, .tabs, .sb-toolbar, .concept-bar, .sc-foot, .add-wrap { display: none !important; }
+  .hdr, .tabs, .sb-toolbar, .concept-bar, .api-panel, .sc-foot, .add-wrap, .gen-btn { display: none !important; }
   .tc { display: block !important; }
   .scene-card { break-inside: avoid; margin-bottom: 18px; border: 1px solid #ccc; }
   body { background: #fff; color: #000; }
   .sc-num { background: #fe4900 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
 @media (max-width: 700px) {
   .sc-body { grid-template-columns: 1fr; }
   .visual { aspect-ratio: 16/9; }
   .frow { grid-template-columns: 1fr; }
   .main { padding: 14px; }
   .stats { grid-template-columns: repeat(2,1fr); }
+  .api-row { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -316,14 +278,12 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
   <section class="tc on" id="tc-checklist">
     <div class="sh">제출 체크리스트</div>
     <div class="ss">마감 06.05(금) 23:59 · 항목을 클릭하여 완료 표시</div>
-
     <div class="stats">
       <div class="stat"><div class="stat-n" id="s-done">0</div><div class="stat-l">완료 항목</div></div>
       <div class="stat"><div class="stat-n" id="s-total">0</div><div class="stat-l">전체 항목</div></div>
       <div class="stat"><div class="stat-n" id="s-pct">0%</div><div class="stat-l">진행률</div></div>
       <div class="stat"><div class="stat-n" id="s-dday" style="color:var(--green)">D-?</div><div class="stat-l">마감까지</div></div>
     </div>
-
     <div class="prog-wrap">
       <div class="prog-top">
         <span class="prog-lbl">전체 진행률</span>
@@ -331,7 +291,6 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
       </div>
       <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
     </div>
-
     <div id="cl-container"></div>
   </section>
 
@@ -360,6 +319,38 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
       <div class="ctag on" onclick="this.classList.toggle('on')">9:16 세로형</div>
     </div>
 
+    <!-- Higgsfield API 설정 패널 -->
+    <div class="api-panel">
+      <div class="api-panel-head" onclick="toggleApiPanel()">
+        <div class="api-panel-title">
+          <div class="hf-dot" id="hf-dot"></div>
+          ✦ Higgsfield API 설정
+          <span id="api-key-status-badge" style="font-size:11px;font-weight:400;color:var(--text3)">— 미설정</span>
+        </div>
+        <button class="api-toggle" id="api-toggle-btn">▲ 접기</button>
+      </div>
+      <div class="api-panel-body" id="api-panel-body">
+        <div class="api-row">
+          <div class="api-field">
+            <label>Key ID</label>
+            <input class="api-input" id="api-key-id" type="password" placeholder="your-key-id" autocomplete="off">
+          </div>
+          <div class="api-field">
+            <label>Key Secret</label>
+            <input class="api-input" id="api-key-secret" type="password" placeholder="your-key-secret" autocomplete="off">
+          </div>
+          <button class="btn btn-o btn-sm" onclick="saveApiKey()">저장</button>
+        </div>
+        <p class="api-note">
+          API 키는 <a href="https://platform.higgsfield.ai" target="_blank">platform.higgsfield.ai</a>에서 발급받으세요.
+          키는 브라우저 로컬에만 저장되며 외부로 전송되지 않습니다.
+        </p>
+        <div class="api-status-row">
+          <span class="api-status-txt" id="api-status-txt"></span>
+        </div>
+      </div>
+    </div>
+
     <div class="scenes" id="scenes-list"></div>
     <div class="add-wrap">
       <button class="add-btn" onclick="addScene()">+ 씬 추가하기</button>
@@ -373,6 +364,7 @@ body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-s
 <script>
 // ────────── DATA ──────────
 const DEADLINE = new Date('2026-06-05T23:59:00+09:00');
+const HF_BASE = 'https://platform.higgsfield.ai';
 
 const CL_DATA = [
   { cat: '영상 규격', items: [
@@ -410,87 +402,55 @@ const CL_DATA = [
 const MOODS = ['강렬한','힙한','감성적','에너지틱','클린','미래적','스트릿','드라마틱'];
 
 const DEFAULT_SCENES = [
-  {
-    id:'sc1', title:'씬 1 — 오프닝',
-    ts:'00:00', te:'00:04',
+  { id:'sc1', title:'씬 1 — 오프닝', ts:'00:00', te:'00:04',
     char:'다크 컬러 오버핏 세트를 입은 AI 패션 캐릭터 (성별 중립, 미래적 외모)',
-    costume:'블랙 오버핏 후디 + 와이드 팬츠 + 청키 스니커즈',
-    action:'카메라를 향해 천천히 돌아서며 시선을 맞춤',
-    expr:'쿨하고 자신감 있는 표정',
-    setting:'완전한 검정 배경, 발 아래 #FE4900 오렌지 빛이 퍼져나옴',
-    camera:'Low angle → Eye level 슬로우 틸트업',
-    text:'',
-    sound:'저음 베이스 빌드업, 긴장감 있는 앰비언스',
-    prompt:'AI fashion character, gender-neutral futuristic humanoid, oversized black hoodie and wide-leg pants, chunky sneakers, pure black background, orange light #FE4900 glowing upward from ground beneath feet, slow camera tilt up from feet to face, cinematic lighting, photorealistic, 9:16 vertical video',
-    moods:['강렬한','미래적'], img:'',
-  },
-  {
-    id:'sc2', title:'씬 2 — 패션 체인지 (룩 1)',
-    ts:'00:04', te:'00:09',
+    costume:'블랙 오버핏 후디 + 와이드 팬츠 + 청키 스니커즈', action:'카메라를 향해 천천히 돌아서며 시선을 맞춤',
+    expr:'쿨하고 자신감 있는 표정', setting:'완전한 검정 배경, 발 아래 #FE4900 오렌지 빛이 퍼져나옴',
+    camera:'Low angle → Eye level 슬로우 틸트업', text:'', sound:'저음 베이스 빌드업, 긴장감 있는 앰비언스',
+    prompt:'AI fashion character, gender-neutral futuristic humanoid, oversized black hoodie and wide-leg pants, chunky sneakers, pure black background, orange light #FE4900 glowing upward from ground beneath feet, slow camera tilt up from feet to face, cinematic lighting, photorealistic, 9:16 vertical',
+    moods:['강렬한','미래적'], img:'' },
+  { id:'sc2', title:'씬 2 — 패션 체인지 (룩 1)', ts:'00:04', te:'00:09',
     char:'씬 1과 동일 AI 캐릭터, 새로운 룩으로 전환',
     costume:'#FE4900 레터링 그래픽 티셔츠 + 데님 카고 팬츠 + 화이트 하이탑',
     action:'오렌지 파티클이 캐릭터를 감싸며 의상이 순식간에 교체되는 outfit swap 효과',
-    expr:'약간 놀라며 웃는 표정, 생동감',
-    setting:'도시 스트릿 배경, 네온 오렌지 조명, 야간',
-    camera:'미디엄 샷 → 캐릭터 중심 빠른 360도 회전',
-    text:'무진장 할인',
-    sound:'비트 드롭, 힙합 베이스',
-    prompt:'AI fashion character wearing orange #FE4900 graphic tee with Korean text, cargo denim pants, white high-top sneakers, glowing orange energy particle outfit transformation effect, neon-lit urban street night background, fast 360 camera spin, dynamic, cinematic, 9:16 vertical video',
-    moods:['힙한','에너지틱'], img:'',
-  },
-  {
-    id:'sc3', title:'씬 3 — 패션 체인지 (룩 2)',
-    ts:'00:09', te:'00:14',
-    char:'씬 1·2와 동일 AI 캐릭터, 세 번째 룩',
-    costume:'베이지 오버사이즈 코트 + 슬랙스 + 로퍼 (시크 무드)',
-    action:'카메라 쪽으로 자신감 있게 걸어오다가 멈추며 포즈',
-    expr:'시크하고 여유로운 표정',
+    expr:'약간 놀라며 웃는 표정, 생동감', setting:'도시 스트릿 배경, 네온 오렌지 조명, 야간',
+    camera:'미디엄 샷 → 캐릭터 중심 빠른 360도 회전', text:'무진장 할인', sound:'비트 드롭, 힙합 베이스',
+    prompt:'AI fashion character wearing orange #FE4900 graphic tee, cargo denim pants, white high-top sneakers, glowing orange energy particle outfit transformation effect, neon-lit urban street night background, fast 360 camera spin, dynamic, cinematic, 9:16 vertical',
+    moods:['힙한','에너지틱'], img:'' },
+  { id:'sc3', title:'씬 3 — 패션 체인지 (룩 2)', ts:'00:09', te:'00:14',
+    char:'씬 1·2와 동일 AI 캐릭터, 세 번째 룩', costume:'베이지 오버사이즈 코트 + 슬랙스 + 로퍼 (시크 무드)',
+    action:'카메라 쪽으로 자신감 있게 걸어오다가 멈추며 포즈', expr:'시크하고 여유로운 표정',
     setting:'크림/아이보리 스튜디오 배경, #FE4900 오렌지 그라디언트 사이드 라이팅',
-    camera:'아이레벨 워킹샷 → 얼굴 클로즈업',
-    text:'역대급 5주년',
-    sound:'리듬 변화, 부드러운 비트 전환',
-    prompt:'AI fashion character in sleek beige oversized coat, slacks, loafers, walking confidently toward camera, cream white studio background with orange #FE4900 gradient side lighting, tracking shot then close-up face, chic Korean fashion aesthetic, cinematic, 9:16 vertical video',
-    moods:['감성적','클린'], img:'',
-  },
-  {
-    id:'sc4', title:'씬 4 — 무진장 폭발',
-    ts:'00:14', te:'00:17',
-    char:'세 룩의 캐릭터 분신이 동시에 등장',
-    costume:'씬 1·2·3 의상 각각 착용',
+    camera:'아이레벨 워킹샷 → 얼굴 클로즈업', text:'역대급 5주년', sound:'리듬 변화, 부드러운 비트 전환',
+    prompt:'AI fashion character in sleek beige oversized coat, slacks, loafers, walking confidently toward camera, cream white studio background with orange #FE4900 gradient side lighting, tracking shot then close-up face, chic Korean fashion aesthetic, cinematic, 9:16 vertical',
+    moods:['감성적','클린'], img:'' },
+  { id:'sc4', title:'씬 4 — 무진장 폭발', ts:'00:14', te:'00:17',
+    char:'세 룩의 캐릭터 분신이 동시에 등장', costume:'씬 1·2·3 의상 각각 착용',
     action:'세 캐릭터가 화면 중앙에서 바깥으로 퍼지며 포즈, 패션 아이템이 폭발적으로 쏟아짐',
-    expr:'세 캐릭터 모두 강렬하고 자신감 있는 포즈',
-    setting:'검정 배경 + #FE4900 에너지 폭발, 스니커즈·가방·의류 난무',
-    camera:'와이드 샷 → 드라마틱 줌아웃',
-    text:'무진장 터진다',
-    sound:'클라이맥스 비트, 최고조',
-    prompt:'Three identical AI fashion characters in different outfits simultaneously exploding outward from screen center, fashion items sneakers bags clothes flying in all directions, massive orange #FE4900 energy burst black background, dramatic wide shot zoom out, cinematic climax, 9:16 vertical video',
-    moods:['강렬한','드라마틱','에너지틱'], img:'',
-  },
-  {
-    id:'sc5', title:'씬 5 — 키비주얼 + 클로징',
-    ts:'00:17', te:'00:20',
-    char:'AI 캐릭터 오렌지 실루엣 (배경으로 물러남)',
-    costume:'오렌지 실루엣',
-    action:'캐릭터 실루엣이 뒤로 물러나며 무진장 키비주얼 이미지가 전면 등장',
-    expr:'(실루엣)',
-    setting:'무신사 무진장 키비주얼 전체 화면 — 편집 시 합성',
-    camera:'스태틱 샷, 텍스트·로고 페이드인',
-    text:'26 여름 무진장 / musinsa.com',
-    sound:'아웃트로, 시그니처 사운드 페이드아웃',
-    prompt:'Orange silhouette of AI fashion character stepping backward, Musinsa Mujinjang key visual image appearing center foreground, black background, orange glow aura, clean minimalist composition, text overlay fade in, cinematic outro, 9:16 vertical video',
-    moods:['클린','드라마틱'], img:'',
-  },
+    expr:'세 캐릭터 모두 강렬하고 자신감 있는 포즈', setting:'검정 배경 + #FE4900 에너지 폭발, 스니커즈·가방·의류 난무',
+    camera:'와이드 샷 → 드라마틱 줌아웃', text:'무진장 터진다', sound:'클라이맥스 비트, 최고조',
+    prompt:'Three identical AI fashion characters in different outfits simultaneously exploding outward from screen center, fashion items sneakers bags clothes flying in all directions, massive orange #FE4900 energy burst black background, dramatic wide shot zoom out, cinematic climax, 9:16 vertical',
+    moods:['강렬한','드라마틱','에너지틱'], img:'' },
+  { id:'sc5', title:'씬 5 — 키비주얼 + 클로징', ts:'00:17', te:'00:20',
+    char:'AI 캐릭터 오렌지 실루엣 (배경으로 물러남)', costume:'오렌지 실루엣',
+    action:'캐릭터 실루엣이 뒤로 물러나며 무진장 키비주얼 이미지가 전면 등장', expr:'(실루엣)',
+    setting:'무신사 무진장 키비주얼 전체 화면 — 편집 시 합성', camera:'스태틱 샷, 텍스트·로고 페이드인',
+    text:'26 여름 무진장 / musinsa.com', sound:'아웃트로, 시그니처 사운드 페이드아웃',
+    prompt:'Orange silhouette of AI fashion character stepping backward, Musinsa Mujinjang key visual image appearing center foreground, black background, orange glow aura, clean minimalist composition, text overlay fade in, cinematic outro, 9:16 vertical',
+    moods:['클린','드라마틱'], img:'' },
 ];
 
 // ────────── STATE ──────────
 let checks = JSON.parse(localStorage.getItem('mj_checks') || '{}');
 let scenes = JSON.parse(localStorage.getItem('mj_scenes') || 'null') || JSON.parse(JSON.stringify(DEFAULT_SCENES));
 let dragIdx = null;
+let apiPanelOpen = true;
 
 // ────────── BOOT ──────────
 document.addEventListener('DOMContentLoaded', () => {
   renderCL();
   renderScenes();
+  loadApiKey();
   countdown();
   setInterval(countdown, 1000);
 });
@@ -515,13 +475,9 @@ function countdown() {
   const s = String(Math.floor(diff%60000/1000)).padStart(2,'0');
   el.textContent = `${h}:${m}:${s}`;
   if (diff < 3600000) el.classList.add('cd-urgent');
-
   const days = Math.ceil(diff/86400000);
   const dd = document.getElementById('s-dday');
-  if (dd) {
-    dd.textContent = days <= 0 ? 'D-DAY' : `D-${days}`;
-    dd.style.color = days <= 1 ? '#ef4444' : 'var(--green)';
-  }
+  if (dd) { dd.textContent = days <= 0 ? 'D-DAY' : `D-${days}`; dd.style.color = days <= 1 ? '#ef4444' : 'var(--green)'; }
 }
 
 // ────────── CHECKLIST ──────────
@@ -529,19 +485,13 @@ function renderCL() {
   const wrap = document.getElementById('cl-container');
   wrap.innerHTML = '';
   let total = 0, done = 0;
-
   CL_DATA.forEach(sec => {
     const secDone = sec.items.filter(i => checks[i.id]).length;
-    total += sec.items.length;
-    done += secDone;
-
+    total += sec.items.length; done += secDone;
     const el = document.createElement('div');
     el.className = 'cl-section';
     el.innerHTML = `
-      <div class="cl-cat">
-        ${sec.cat}
-        <span class="cat-badge">${secDone}/${sec.items.length}</span>
-      </div>
+      <div class="cl-cat">${sec.cat}<span class="cat-badge">${secDone}/${sec.items.length}</span></div>
       ${sec.items.map(item => `
         <div class="cl-item${checks[item.id]?' done':''}" onclick="toggleCheck('${item.id}')">
           <div class="cbox"><span class="ccheck">✓</span></div>
@@ -549,12 +499,9 @@ function renderCL() {
             <div class="ctitle">${item.t}</div>
             ${item.d?`<div class="cdesc">${item.d}</div>`:''}
           </div>
-        </div>
-      `).join('')}
-    `;
+        </div>`).join('')}`;
     wrap.appendChild(el);
   });
-
   const pct = total ? Math.round(done/total*100) : 0;
   document.getElementById('s-done').textContent = done;
   document.getElementById('s-total').textContent = total;
@@ -569,7 +516,60 @@ function toggleCheck(id) {
   renderCL();
 }
 
-// ────────── STORYBOARD ──────────
+// ────────── API KEY ──────────
+function loadApiKey() {
+  const id = localStorage.getItem('hf_key_id') || '';
+  const secret = localStorage.getItem('hf_key_secret') || '';
+  if (id) document.getElementById('api-key-id').value = id;
+  if (secret) document.getElementById('api-key-secret').value = secret;
+  updateApiStatus(id && secret);
+}
+
+function saveApiKey() {
+  const id = document.getElementById('api-key-id').value.trim();
+  const secret = document.getElementById('api-key-secret').value.trim();
+  if (!id || !secret) { setApiStatus('Key ID와 Key Secret을 모두 입력해 주세요', false); return; }
+  localStorage.setItem('hf_key_id', id);
+  localStorage.setItem('hf_key_secret', secret);
+  updateApiStatus(true);
+  toast('API 키 저장 완료', 'ok');
+}
+
+function getApiKey() {
+  const id = localStorage.getItem('hf_key_id');
+  const secret = localStorage.getItem('hf_key_secret');
+  return (id && secret) ? `${id}:${secret}` : null;
+}
+
+function updateApiStatus(connected) {
+  const dot = document.getElementById('hf-dot');
+  const badge = document.getElementById('api-key-status-badge');
+  const txt = document.getElementById('api-status-txt');
+  if (connected) {
+    dot.classList.add('connected');
+    badge.textContent = '— 연결됨';
+    badge.style.color = 'var(--green)';
+    if (txt) { txt.textContent = '✓ API 키가 설정되어 있습니다. 각 씬에서 이미지를 생성할 수 있습니다.'; txt.className = 'api-status-txt ok'; }
+  } else {
+    dot.classList.remove('connected');
+    badge.textContent = '— 미설정';
+    badge.style.color = 'var(--text3)';
+    if (txt) { txt.textContent = ''; txt.className = 'api-status-txt'; }
+  }
+}
+
+function setApiStatus(msg, ok) {
+  const txt = document.getElementById('api-status-txt');
+  if (txt) { txt.textContent = msg; txt.className = 'api-status-txt ' + (ok ? 'ok' : 'err'); }
+}
+
+function toggleApiPanel() {
+  apiPanelOpen = !apiPanelOpen;
+  document.getElementById('api-panel-body').style.display = apiPanelOpen ? '' : 'none';
+  document.getElementById('api-toggle-btn').textContent = apiPanelOpen ? '▲ 접기' : '▼ 펼치기';
+}
+
+// ────────── STORYBOARD RENDER ──────────
 function renderScenes() {
   const list = document.getElementById('scenes-list');
   list.innerHTML = '';
@@ -600,15 +600,22 @@ function makeCard(sc, i) {
     </div>
 
     <div class="sc-body">
-      <div>
+      <div class="visual-col">
         <div class="visual" id="vis-${i}" onclick="trigUp(${i})">
           ${sc.img
             ? `<img src="${h(sc.img)}" alt="씬 이미지">`
             : `<div class="v-ph"><div class="v-icon">👤</div><div class="v-lbl">씬 이미지<br>클릭하여 추가</div></div>`
           }
-          <button class="v-add" onclick="event.stopPropagation();trigUp(${i})">+ 이미지</button>
+          <div class="v-loading" id="vl-${i}">
+            <div class="spinner"></div>
+            <div class="v-loading-txt" id="vlt-${i}">생성 중...</div>
+          </div>
+          <button class="v-add" onclick="event.stopPropagation();trigUp(${i})">+ 업로드</button>
         </div>
         <input type="file" accept="image/*" style="display:none" id="fi-${i}" onchange="imgUp(${i},this)">
+        <button class="gen-btn" id="gb-${i}" onclick="generateImage(${i})">
+          <span class="hf-icon">✦</span> Higgsfield로 생성
+        </button>
       </div>
 
       <div class="fields">
@@ -655,7 +662,7 @@ function makeCard(sc, i) {
         <div class="field full">
           <div class="flbl">AI 생성 프롬프트 (영문)</div>
           <div class="prompt-wrap">
-            <textarea class="prompt-ta" rows="3" placeholder="Runway / Kling / Sora 등에 입력할 영문 프롬프트" onchange="upd(${i},'prompt',this.value)">${h(sc.prompt)}</textarea>
+            <textarea class="prompt-ta" rows="3" placeholder="Higgsfield / Runway / Kling 등에 입력할 영문 프롬프트" onchange="upd(${i},'prompt',this.value)">${h(sc.prompt)}</textarea>
             <button class="copy-btn" onclick="copyP(${i})">복사</button>
           </div>
         </div>
@@ -674,7 +681,6 @@ function makeCard(sc, i) {
     </div>
   `;
 
-  // Drag
   card.addEventListener('dragstart', e => { dragIdx = i; card.classList.add('dragging'); e.dataTransfer.effectAllowed = 'move'; });
   card.addEventListener('dragend', () => { card.classList.remove('dragging'); document.querySelectorAll('.scene-card').forEach(c=>c.classList.remove('drag-over')); });
   card.addEventListener('dragover', e => { e.preventDefault(); card.classList.add('drag-over'); });
@@ -687,10 +693,131 @@ function makeCard(sc, i) {
       dragIdx = null; save(); renderScenes();
     }
   });
-
   return card;
 }
 
+// ────────── HIGGSFIELD 이미지 생성 ──────────
+async function generateImage(idx) {
+  const key = getApiKey();
+  if (!key) {
+    toast('Higgsfield API 키를 먼저 설정해 주세요', 'err');
+    document.getElementById('api-panel-body').style.display = '';
+    apiPanelOpen = true;
+    document.getElementById('api-toggle-btn').textContent = '▲ 접기';
+    return;
+  }
+
+  const prompt = scenes[idx].prompt;
+  if (!prompt.trim()) { toast('프롬프트를 먼저 입력해 주세요', 'err'); return; }
+
+  const btn = document.getElementById('gb-' + idx);
+  setGenLoading(idx, true, '요청 중...');
+  btn.disabled = true;
+
+  try {
+    // 1단계: 생성 요청
+    const res = await fetch(`${HF_BASE}/flux-pro/kontext/max/text-to-image`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Key ${key}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        input: {
+          prompt: prompt,
+          aspect_ratio: '9:16',
+          safety_tolerance: 2,
+        }
+      })
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`API 오류 (${res.status}): ${errText.slice(0,120)}`);
+    }
+
+    const data = await res.json();
+
+    // 요청 ID 추출
+    const requestId = data.id || data.request_id || data.jobs?.[0]?.id || data.jobId;
+    if (!requestId) throw new Error('응답에서 ID를 찾을 수 없습니다. 콘솔을 확인하세요.');
+
+    // 2단계: 결과 폴링
+    await pollForResult(requestId, idx);
+
+  } catch (err) {
+    setGenLoading(idx, false);
+    btn.disabled = false;
+    if (err.name === 'TypeError' && err.message.includes('fetch')) {
+      toast('CORS 오류: 브라우저에서 직접 호출이 차단됐습니다. 로컬 파일로 실행해 주세요.', 'err');
+    } else {
+      toast(err.message, 'err');
+    }
+    console.error('[Higgsfield]', err);
+  }
+}
+
+async function pollForResult(requestId, idx) {
+  const key = getApiKey();
+  const MAX = 30;
+
+  for (let attempt = 1; attempt <= MAX; attempt++) {
+    await sleep(2000);
+    setGenLoading(idx, true, `생성 중... (${attempt}/${MAX})`);
+
+    try {
+      const res = await fetch(`${HF_BASE}/requests/${requestId}/status`, {
+        headers: { 'Authorization': `Key ${key}` }
+      });
+      if (!res.ok) continue;
+
+      const data = await res.json();
+      const status = data.status
+        || data.jobs?.[0]?.status
+        || data.state;
+
+      if (status === 'completed' || status === 'succeeded' || status === 'success') {
+        // 이미지 URL 추출 (다양한 응답 구조 대응)
+        const imgUrl =
+          data.jobs?.[0]?.results?.raw?.url ||
+          data.jobs?.[0]?.results?.min?.url ||
+          data.output?.[0] ||
+          data.result?.url ||
+          data.images?.[0]?.url ||
+          data.url;
+
+        if (!imgUrl) throw new Error('완료됐으나 이미지 URL을 찾을 수 없습니다.');
+
+        scenes[idx].img = imgUrl;
+        save();
+        renderScenes();
+        toast(`씬 ${idx+1} 이미지 생성 완료!`, 'ok');
+        return;
+      }
+
+      if (status === 'failed' || status === 'error') {
+        throw new Error('생성 실패: ' + (data.error || data.message || '알 수 없는 오류'));
+      }
+    } catch (pollErr) {
+      if (attempt === MAX) throw pollErr;
+    }
+  }
+
+  throw new Error('시간 초과 (1분). 나중에 다시 시도해 주세요.');
+}
+
+function setGenLoading(idx, loading, txt) {
+  const overlay = document.getElementById('vl-' + idx);
+  const label = document.getElementById('vlt-' + idx);
+  const btn = document.getElementById('gb-' + idx);
+  if (overlay) overlay.classList.toggle('show', loading);
+  if (label && txt) label.textContent = txt;
+  if (btn) btn.disabled = loading;
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// ────────── SCENE ACTIONS ──────────
 function upd(i, k, v) { scenes[i][k] = v; save(); updateDuration(); }
 
 function togMood(i, m, el) {
@@ -701,18 +828,15 @@ function togMood(i, m, el) {
 }
 
 function copyP(i) {
-  navigator.clipboard.writeText(scenes[i].prompt||'').then(()=>toast('프롬프트 복사됨','ok')).catch(()=>toast('복사 실패','err'));
+  navigator.clipboard.writeText(scenes[i].prompt||'')
+    .then(()=>toast('프롬프트 복사됨','ok'))
+    .catch(()=>toast('복사 실패','err'));
 }
 
 function addScene() {
-  scenes.push({
-    id:'sc'+Date.now(), title:`씬 ${scenes.length+1} — 새 씬`,
-    ts:'00:00', te:'00:05',
-    char:'', costume:'', action:'', expr:'',
-    setting:'', camera:'', text:'', sound:'', prompt:'', moods:[], img:'',
-  });
+  scenes.push({ id:'sc'+Date.now(), title:`씬 ${scenes.length+1} — 새 씬`, ts:'00:00', te:'00:05', char:'', costume:'', action:'', expr:'', setting:'', camera:'', text:'', sound:'', prompt:'', moods:[], img:'' });
   save(); renderScenes();
-  setTimeout(()=>{ const cs=document.querySelectorAll('.scene-card'); cs[cs.length-1].scrollIntoView({behavior:'smooth',block:'start'}); },80);
+  setTimeout(()=>{ const cs=document.querySelectorAll('.scene-card'); cs[cs.length-1].scrollIntoView({behavior:'smooth',block:'start'}); }, 80);
 }
 
 function delSc(i) {
@@ -760,10 +884,10 @@ let toastTimer;
 function toast(msg, type) {
   const el=document.getElementById('toast');
   document.getElementById('toast-msg').textContent=msg;
-  document.getElementById('toast-icon').textContent = type==='ok'?'✓':type==='err'?'✕':'';
+  document.getElementById('toast-icon').textContent = type==='ok'?'✓':type==='err'?'✕':'ℹ';
   el.className='toast show '+(type||'');
   clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>el.classList.remove('show'),2400);
+  toastTimer=setTimeout(()=>el.classList.remove('show'),3000);
 }
 </script>
 </body>
