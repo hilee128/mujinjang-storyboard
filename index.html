@@ -459,23 +459,6 @@ const DEFAULT_SCENES = [
   },
   /* ── 블록 1: 오프닝 ── */
   {
-    id:'sc1', title:'씬 1-A — 도시 야경 (오프닝)',
-    ts:'00:00', te:'00:01',
-    char:'(없음)',
-    costume:'(없음)',
-    action:'한밤중 도시 야경. 불 꺼진 아파트 외관 전경',
-    expr:'(없음)',
-    setting:'도시 야경. 아파트 외관. 대부분 불 꺼짐. 달빛',
-    camera:'와이드 에스터블리싱 샷. 드론뷰 or 고층 앵글',
-    text:'',
-    sound:'완전한 정적. 도시 소음 아주 희미하게',
-    prompt:'City night exterior establishing shot, match the building style and atmosphere in the reference image, shot on 35mm film, warm moody atmosphere, natural grain texture, no AI look, 9:16 vertical',
-    moods:['강렬한','드라마틱'],
-    refImg:'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80',
-    crawlKw:['도시 야경 아파트 밤','불 꺼진 도시 밤 항공샷','한밤중 도시 전경 달빛'],
-    img:'',
-  },
-  {
     id:'sc1b', title:'씬 1-B — 창문·커튼',
     ts:'00:01', te:'00:02',
     char:'(없음)',
@@ -844,7 +827,7 @@ const DEFAULT_SCENES = [
 
 // ────────── STATE ──────────
 let checks = JSON.parse(localStorage.getItem('mj_checks') || '{}');
-const SCENE_VERSION = 'v11';
+const SCENE_VERSION = 'v12';
 const savedVersion = localStorage.getItem('mj_scene_ver');
 if (savedVersion !== SCENE_VERSION) {
   localStorage.removeItem('mj_scenes');
