@@ -422,22 +422,39 @@ const CL_DATA = [
 const MOODS = ['강렬한','힙한','감성적','에너지틱','클린','미래적','스트릿','드라마틱'];
 
 const DEFAULT_SCENES = [
-  /* ── 블록 0: 인트로 텍스트 ── */
+  /* ── 블록 0: 인트로 ── */
   {
-    id:'sc0', title:'씬 0 — 인트로 텍스트',
-    ts:'00:00', te:'00:02',
+    id:'sc0a', title:'씬 0-A — 텍스트 인트로',
+    ts:'00:00', te:'00:01',
     char:'(없음)',
     costume:'(없음)',
-    action:'완전한 검정 화면. "6월 14일." 텍스트 등장 → "그놈이 오고 있다.." 텍스트 등장',
+    action:'완전한 검정 화면. 「 무신사 그놈이 오고 있다.. 」 텍스트가 한 글자씩 천천히 등장. 끝에 ".." 깜빡임',
     expr:'(텍스트만)',
-    setting:'완전한 검정 배경. 흰 텍스트만',
-    camera:'스태틱. 텍스트 페이드인',
+    setting:'완전한 검정. 흰 텍스트만. 낫표(「」) 강조',
+    camera:'스태틱. 글자 하나씩 타이핑 효과',
     text:'「 무신사 그놈이 오고 있다.. 」',
-    sound:'완전한 정적. 저음 베이스 한 음만',
-    prompt:'Pure black background, bold white Korean text "「 무신사 그놈이 오고 있다.. 」" appearing with quotation marks, minimal cinematic title card, thriller atmosphere, 9:16 vertical',
+    sound:'완전한 정적. 타이핑 소리. 마지막 ".." 에서 저음 베이스 한 음',
+    prompt:'Pure black background, white Korean bold text "「 무신사 그놈이 오고 있다.. 」" centered, quotation brackets visible, minimal cinematic thriller title card, 9:16 vertical',
     moods:['강렬한','드라마틱'],
     refImg:'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=600&q=80',
-    crawlKw:['검정 배경 흰 텍스트 인트로','스릴러 타이틀 카드','미니멀 검정 텍스트 영화'],
+    crawlKw:['검정 배경 흰 텍스트 인트로','스릴러 타이틀 카드','미니멀 경고 문구 검정'],
+    img:'',
+  },
+  {
+    id:'sc0b', title:'씬 0-B — 그놈의 손 (하드컷)',
+    ts:'00:01', te:'00:02',
+    char:'그림자의 살색 손 — 카메라를 향해 뻗어옴',
+    costume:'손만 노출. 뒤로 후드 쓴 인물 흐릿하게',
+    action:'하드컷으로 전환. 문 틈에서 살색 손이 카메라를 향해 천천히 뻗어옴. 손가락이 벌어지며 잡으려는 듯한 동작',
+    expr:'(손만 보임. 극도의 위협감)',
+    setting:'어두운 문 틈. 손이 화면 가득. 뒤로 후드 쓴 실루엣 아웃포커스',
+    camera:'익스트림 클로즈업. 하드컷 전환. 핸드헬드 미세 흔들림',
+    text:'',
+    sound:'0.5초 완전 정적 → 소름 돋는 저음 현악기 한 음 + 심장 박동',
+    prompt:'Skin-tone hand reaching through narrow dark door crack directly toward camera, fingers spread and grasping menacingly, blurred dark hooded figure barely visible behind, extreme close-up, dramatic shallow depth of field, cinematic thriller, photorealistic, 9:16 vertical',
+    moods:['강렬한','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1509515837298-2c67a3933321?w=600&q=80',
+    crawlKw:['손 문틈 카메라 향해 뻗음','스릴러 손 클로즈업 위협','문 틈 살색 손 후드 인물'],
     img:'',
   },
   /* ── 블록 1: 오프닝 ── */
@@ -810,7 +827,7 @@ const DEFAULT_SCENES = [
 
 // ────────── STATE ──────────
 let checks = JSON.parse(localStorage.getItem('mj_checks') || '{}');
-const SCENE_VERSION = 'v7';
+const SCENE_VERSION = 'v8';
 const savedVersion = localStorage.getItem('mj_scene_ver');
 if (savedVersion !== SCENE_VERSION) {
   localStorage.removeItem('mj_scenes');
