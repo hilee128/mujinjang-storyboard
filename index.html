@@ -432,9 +432,9 @@ const DEFAULT_SCENES = [
     expr:'(텍스트만)',
     setting:'완전한 검정 배경. 흰 텍스트만',
     camera:'스태틱. 텍스트 페이드인',
-    text:'6월 14일. 그놈이 오고 있다..',
+    text:'「 무신사 그놈이 오고 있다.. 」',
     sound:'완전한 정적. 저음 베이스 한 음만',
-    prompt:'Pure black background, bold white Korean text "6월 14일" appearing first, then "그놈이 오고 있다.." fading in below, minimal cinematic title card, thriller atmosphere, 9:16 vertical',
+    prompt:'Pure black background, bold white Korean text "「 무신사 그놈이 오고 있다.. 」" appearing with quotation marks, minimal cinematic title card, thriller atmosphere, 9:16 vertical',
     moods:['강렬한','드라마틱'],
     refImg:'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=600&q=80',
     crawlKw:['검정 배경 흰 텍스트 인트로','스릴러 타이틀 카드','미니멀 검정 텍스트 영화'],
@@ -798,7 +798,7 @@ const DEFAULT_SCENES = [
     expr:'(텍스트만)',
     setting:'검정 배경. 흰 텍스트. 마지막 무신사 오렌지 키비주얼',
     camera:'스태틱. 텍스트 페이드인',
-    text:'무진장 많이도 해먹었네. → 범인은 무진장이었다. → 무신사에, 다 있으니까. → 6월 14일 오후 7시',
+    text:'무진장 내 취향.  무진장 싸다. → 6월 14일 오후 7시 → [무신사 무진장 키비주얼]',
     sound:'페이드아웃. 시그니처 사운드',
     prompt:'Minimal black background, bold white Korean typography fading in sequentially, clean cinematic closing title card, orange accent #FE4900, 9:16 vertical',
     moods:['클린','드라마틱'],
@@ -810,7 +810,7 @@ const DEFAULT_SCENES = [
 
 // ────────── STATE ──────────
 let checks = JSON.parse(localStorage.getItem('mj_checks') || '{}');
-const SCENE_VERSION = 'v6';
+const SCENE_VERSION = 'v7';
 const savedVersion = localStorage.getItem('mj_scene_ver');
 if (savedVersion !== SCENE_VERSION) {
   localStorage.removeItem('mj_scenes');
