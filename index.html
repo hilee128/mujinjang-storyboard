@@ -616,6 +616,23 @@ const DEFAULT_SCENES = [
   },
   /* ── 블록 5: 피해자 몽타주 ── */
   {
+    id:'sc4c', title:'씬 4-C — 옷장 문 열고 주저앉는 컷',
+    ts:'00:09', te:'00:10',
+    char:'에겐룩녀 (씬 4와 동일 인물)',
+    costume:'잠옷',
+    action:'옷장 문을 열고 텅 빈 옷장을 발견. 멍하게 서있다가 천천히 무릎이 꺾이며 그 자리에 주저앉음',
+    expr:'충격 → 멍함 → 무릎 꺾이며 절망',
+    setting:'어두운 방. 옷장 문 활짝 열림. 텅 빈 옷장',
+    camera:'미디엄 샷. 인물 전신. 주저앉는 순간까지 한 컷으로',
+    text:'',
+    sound:'드라마틱 슬로우 효과음. 무릎 꺾이는 순간 타악기',
+    prompt:'Person opens wardrobe door to reveal completely empty interior, stands frozen in shock, then slowly collapses to knees on floor in despair, match the person and room in the reference image, shot on 35mm film, warm candid photography, natural grain texture, no AI look, 9:16 vertical',
+    moods:['감성적','드라마틱'],
+    refImg:'https://images.unsplash.com/photo-1541178735493-479c1a27ed24?w=600&q=80',
+    crawlKw:['텅 빈 옷장 발견 주저앉는 장면','빈 옷장 앞 쓰러지는 사람','충격받고 무릎 꺾이는 장면'],
+    img:'',
+  },
+  {
     id:'sc5', title:'씬 5-A — 피해자 ① 스트릿남',
     ts:'00:09', te:'00:10',
     char:'20대 남성. 스트릿 패션 취향',
@@ -827,7 +844,7 @@ const DEFAULT_SCENES = [
 
 // ────────── STATE ──────────
 let checks = JSON.parse(localStorage.getItem('mj_checks') || '{}');
-const SCENE_VERSION = 'v10';
+const SCENE_VERSION = 'v11';
 const savedVersion = localStorage.getItem('mj_scene_ver');
 if (savedVersion !== SCENE_VERSION) {
   localStorage.removeItem('mj_scenes');
